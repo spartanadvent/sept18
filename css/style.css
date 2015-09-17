@@ -1,0 +1,47 @@
+
+
+
+
+li {
+ list-style: none;
+ height: 60px;
+ border: 1px solid black;
+ text-align: center;
+
+}
+
+
+
+.title {
+ color: white;
+ background-color: #434242 ;
+}.active {
+ color: white;
+ background-color: #434242 ;
+}
+.added {
+ color: white;
+ background-color:  #646262 ;
+}
+.hover{
+ color: white;
+ background-color: #A7A4A4 ;
+}
+.selected {
+ color: black;
+ background-color:  #D3D2D2 ;
+}
+.success {
+ color: black;
+ background-color:  #E9E8E8 ;
+}
+.error {
+ color: black;
+ background-color: #F2F1F1 ;
+}
+.base {
+ color: black;
+ background-color:  #D3D2D2 ;
+}
+
+
