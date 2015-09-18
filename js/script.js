@@ -31,6 +31,16 @@ var loop_all = function(){
 	submit_listeners();
 };
 
+var fu_minus_click = function(){
+    var minus_list = document.getElementsByClassName('minus');
+    for (var i = 0; i < minus_list.length; i++){
+        minus_list[i].addEventListener('click', function(){
+            
+        });
+    }
+    
+};
+
 var loop_all_remove = function(){
 	for (var i= 0; i < li_list.length; i++){
 		var el = li_list[i],
