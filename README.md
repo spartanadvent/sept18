@@ -12,27 +12,33 @@
 * <s>Remove all logic from html</s>
 * <s>mouse out on list to hide minus</s>
 * <s>touchstart>tap>near minus>hide minus</s>
-* style>readable background>Dark/light text>oam display>light/dark text. #julian
+* <s>style>readable background>Dark/light text>oam display>light/dark text.</s> #julian
 * <s>Check if game is already in the list</s>
-* touchstart > touchswipe #vison/#julian/#Eric
+* <s>touchstart > touchswipe</s> #vison/#julian/#Eric
 * Borders, change, colors, css 
 * <s>converting functions to new and normal layout</s> #julian
 * <s>meta tag viewport width=device-width-->mobile responsive</s> #Eric
-* css --> Class names for UI/UX #julian
-    * alert
-    * active
-    * hover
-    * added
-    * selected
+* <s>css --> Class names for UI/UX</s> #julian
+    * <s>alert</s>
+    * <s>active</s>
+    * <s>hover</s>
+    * <s>added</s>
+    * <s>selected</s>
 * <s>add to documentation</s> #Eric
-* display "Alert prompt" - name of game and already added in seperate div #vinson
+* <s>display "Alert prompt" - name of game and already added in seperate div</s> #vinson
 * touchswipe vertical - down to add list item on longer list
+* CSS --> tighten up style
+* Disable Alerts --> console.log (errors)
+* Add game --> Visible Dark
+    * "ADD GAME" UI/UX -->  Bevel button shadow
+* doubletap/click --> change/update_name
+    * update "game updates"
 
 ##Colors
 
 <http://1drv.ms/1Kjlajv>
 
-![sept17 whiteboard](http://i.imgur.com/6ZZhxWNm.jpg?1)
+![sept18 whiteboard](http://i.imgur.com/lq0QaWum.jpg?1)
 
 
 ##Future Features To Add
