@@ -1,5 +1,5 @@
 #Gamestore Inventory JS App -
-#### v.004
+#### v.005
 
 ##User Interface Design Reference
 <http://geekwise.github.io/geekwise.js.edc.sept09/user_interface_design_reference.html>
