@@ -35,7 +35,7 @@ var fu_minus_click = function(){
     var minus_list = document.getElementsByClassName('minus');
     for (var i = 0; i < minus_list.length; i++){
         minus_list[i].addEventListener('click', function(){
-            
+            this.parentNode.remove(this.parentNode);
         });
     }
     
@@ -68,20 +68,21 @@ var fu_mouse_leave= function(target){
 
 
 function make_minus(target){
-	if (target.id === "alert"){return;};
-	if (target.classList.contains('title') || target.classList.contains('form')){return;};
+	if (target.id === "alert"){return;}
+	if (target.classList.contains('title') || target.classList.contains('form')){return;}
 	if (target.children.length<1){
 		var new_minus = document.createElement('div');
 		target.appendChild(new_minus);
 		new_minus.innerText = "-"; 
 		new_minus.classList.add("minus");
-	};
-};
+	}
+	fu_minus_click();
+}
 
 function remove_minus(target){
 	if (target.children.length==1) {
-		target.removeChild(target.children[0])
-	};
+		target.removeChild(target.children[0]);
+	}
 }
 
 function fu_open_form(target){
@@ -98,7 +99,7 @@ function fu_close_form(target){
 	if (target.classList.contains('form')){
 		li_list[1].classList.remove('open');
 		li_list[1].classList.add('closed');			
-	};
+	}
 }
 
 function add_game(name_value){
@@ -147,6 +148,10 @@ var start_swipe = 0;
 var end_swipe = 0;
 var threshold = 100;
 var y_threshold = 50;
+var start_swipe_y;
+var end_swipe_y;
+var alert_interval;
+
 
 var fu_mouse_down = function(target){
 	start_swipe = event.clientX;
@@ -165,7 +170,7 @@ var fu_mouse_up = function(target){
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
 			alert("crooked fingers");
-			alert(start_swipe_y - end_swipe_y)
+			alert(start_swipe_y - end_swipe_y);
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
@@ -176,7 +181,7 @@ var fu_mouse_up = function(target){
 		//global_target.remove(global_target);						
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left')
+		alert('swipe left');
 	}
 };
 		
@@ -196,7 +201,7 @@ var fu_touch_end = function(event){
 	if (start_swipe_y > end_swipe_y){
 		if (start_swipe_y - end_swipe_y > y_threshold){
 			alert("crooked fingers");
-			alert(start_swipe_y - end_swipe_y)
+			alert(start_swipe_y - end_swipe_y);
 		}
 	}       			
 	if (start_swipe + threshold< end_swipe ){
@@ -209,7 +214,7 @@ var fu_touch_end = function(event){
 		//this.remove(this);					
 	}
 	if (start_swipe > end_swipe + threshold){
-		alert('swipe left')
+		alert('swipe left');
 	}
 };
 
@@ -218,11 +223,11 @@ var fu_alert_box = function(){
 	var alert_interval =setInterval(function(){	 	
 		document.getElementById('alert').classList.add('hidden');
 		clearInterval(alert_interval);
-		for (i=0;i<li_list.length;i++){
+		for (var i=0;i<li_list.length;i++){
 			if (li_list[i].classList.contains('deleted')){
 				li_list[i].remove(li_list[i]);
 			}
-		};
+		}
 	}, 3000);
 };
 
